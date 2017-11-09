@@ -29,6 +29,26 @@
                     </archive>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jarsigner-plugin</artifactId>
+                <version>1.4</version>
+                <executions>
+                    <execution>
+                        <id>sign</id>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <keystore>C:/Temp/testKeys</keystore>
+                    <alias>jdc</alias>
+                    <storepass>gandbol</storepass>
+                    <keypass>gandbol</keypass>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
