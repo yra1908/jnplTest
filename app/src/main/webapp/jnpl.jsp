@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jnlp spec="1.0+" codebase=""
-      href="dynamictree_webstart.jnlp">
+<jnlp spec="1.0+" href="test.jnlp">
     <information>
         <title>Web Start Test</title>
-        <vendor>41X</vendor>
+        <vendor>home</vendor>
     </information>
     <resources>
         <!-- Application Resources -->
         <j2se version="1.8+"
               href="http://java.sun.com/products/autodl/j2se"/>
-        <jar href="demo-0.0.1-SNAPSHOT.jar"  main="true" />
+        <jar href="frame.jar"  main="true" />
     </resources>
+    <security>
+        <all-permissions/>
+    </security>
     <application-desc
             name="JNPL Test"
-            main-class="com.example.demo.frame.WebStartExample"
+            main-class="demo.frame.WebStartExample"
             width="300"
             height="300">
     </application-desc>

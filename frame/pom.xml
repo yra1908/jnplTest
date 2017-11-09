@@ -22,6 +22,10 @@
                         <manifest>
                             <mainClass>demo.frame.WebStartExample</mainClass>
                         </manifest>
+                        <manifestEntries>
+                            <Permissions>all-permissions</Permissions>
+                            <Application-Name>JNLP-Test</Application-Name>
+                        </manifestEntries>
                     </archive>
                 </configuration>
             </plugin>
