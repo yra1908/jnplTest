@@ -14,13 +14,22 @@ public class WebStartExample {
     static JFrame jFrame = getFrame();
     static JPanel jPanel = new JPanel();
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         jFrame.add(jPanel);
-        ((JButton)jPanel.add(new JButton("click"))).addActionListener(
+        if (args.length == 0) {
+            System.out.println("No args");
+        }
+        ((JButton) jPanel.add(new JButton("click"))).addActionListener(
                 new ActionListener() {
+
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         System.out.println("clicked!");
+
+                        for (String arg : args) {
+                            System.out.println(arg);
+                        }
+
                         try {
                             System.out.println("*****************************************");
                             System.out.println(new File(WebStartExample.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath()).toString());
@@ -34,9 +43,10 @@ public class WebStartExample {
     }
 
     private static JFrame getFrame() {
-        JFrame jFrame = new JFrame(){};
+        JFrame jFrame = new JFrame() {
+        };
         jFrame.setVisible(true);
-        jFrame.setBounds(750,250,500,500);
+        jFrame.setBounds(750, 250, 500, 500);
         jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         return jFrame;
 

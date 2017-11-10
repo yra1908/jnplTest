@@ -5,7 +5,7 @@
     String sessionId = request.getSession().getId();
 %>
 
-<jnlp spec="1.0+" codebase="file:/C:/dev/apache-tomcat-8.5.16/webapps/ROOT/" href="test.jnlp">
+<jnlp spec="1.0+" codebase="file:/C:/work/dependencies/apache-tomcat-7.0.57/webapps/ROOT/">
     <information>
         <title>Web Start Test</title>
         <vendor>home</vendor>
@@ -24,7 +24,10 @@
             main-class="demo.frame.WebStartExample"
             width="300"
             height="300">
-        <param name="sid" value="<%=sessionId%>"/>
+        <%--passing arguments works fine--%>
+        <argument><%=sessionId%></argument>
+        <argument>2nd argument</argument>
+        <argument>key:<%=sessionId%></argument>
     </application-desc>
     <update check="background"/>
 </jnlp>
