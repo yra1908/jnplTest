@@ -50,7 +50,7 @@
                 </executions>
                 <configuration>
                     <!--Generate keystore with comand: keytool -genkey -keystore testKeys -alias medhostcodesigncert
-                    from C:/Temp, password - -->
+                    from C:/Temp, password - s1016155 -->
                     <keystore>C:/Temp/testKeys</keystore>
                     <alias>medhostcodesigncert</alias>
                     <storepass>s1016155</storepass>
