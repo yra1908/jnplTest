@@ -9,6 +9,12 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
+    <parent>
+        <groupId>demo.example</groupId>
+        <artifactId>JNLPTest</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
     <build>
         <finalName>frame</finalName>
         <plugins>
@@ -43,20 +49,16 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <!--Generate keystore with comand: keytool -genkey -keystore testKeys -alias medhostcodesigncert
+                    from C:/Temp, password - -->
                     <keystore>C:/Temp/testKeys</keystore>
-                    <alias>jdc</alias>
-                    <storepass>gandbol</storepass>
-                    <keypass>gandbol</keypass>
+                    <alias>medhostcodesigncert</alias>
+                    <storepass>s1016155</storepass>
+                    <keypass>s1016155</keypass>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
-    <parent>
-        <groupId>demo.example</groupId>
-        <artifactId>JNLPTest</artifactId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
 
     
 </project>

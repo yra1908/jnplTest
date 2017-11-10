@@ -3,6 +3,8 @@ package demo.frame;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.net.URISyntaxException;
 
 /**
  * Created by ychikh on 09.11.2017.
@@ -19,6 +21,13 @@ public class WebStartExample {
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         System.out.println("clicked!");
+                        try {
+                            System.out.println("*****************************************");
+                            System.out.println(new File(WebStartExample.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath()).toString());
+                            System.out.println("*****************************************");
+                        } catch (URISyntaxException e1) {
+                            e1.printStackTrace();
+                        }
                     }
                 }
         );
