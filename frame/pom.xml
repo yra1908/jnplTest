@@ -49,12 +49,11 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <!--Generate keystore with comand: keytool -genkey -keystore testKeys -alias medhostcodesigncert
-                    from C:/Temp, password - s1016155 -->
-                    <keystore>C:/Temp/testKeys</keystore>
-                    <alias>medhostcodesigncert</alias>
-                    <storepass>s1016155</storepass>
-                    <keypass>s1016155</keypass>
+                    <!--Generate keystore with comand: keytool -genkey -keystore testKeys -alias test -->
+                    <keystore>src/main/resources/keystore/testKeys</keystore>
+                    <alias>test</alias>
+                    <storepass>password</storepass>
+                    <keypass>password</keypass>
                 </configuration>
             </plugin>
         </plugins>
