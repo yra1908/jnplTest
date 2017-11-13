@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jnlp spec="1.0+" codebase="file:/C:/work/dependencies/apache-tomcat-7.0.57/webapps/ROOT/" href="test.jnlp">
+<jnlp spec="1.0+" codebase="http://localhost:8080/lib/" href="test.jnlp">
     <information>
         <title>Web Start Test</title>
         <vendor>home</vendor>
@@ -8,7 +8,7 @@
         <!-- Application Resources -->
         <j2se version="1.8+"
               href="http://java.sun.com/products/autodl/j2se"/>
-        <jar href="WEB-INF/lib/frame.jar" main="true"/>
+        <jar href="frame_23.jar" main="true"/>
     </resources>
     <security>
         <all-permissions/>
