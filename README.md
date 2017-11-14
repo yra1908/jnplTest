@@ -16,5 +16,7 @@ if deployment app:war exploded  place frame.jar to app->target->lib folder
 ![Alt text](https://lh5.googleusercontent.com/hno3JBqm6BfGCoJ2ReNVc4ZpSAkDOtfFgKvFDgmkAR1hag0Ep7-4xv6GUF35n7Sp_JbVPfGUYCmHPj_ipKrJ=w1920-h947 "deployment - exploded") 
 
 Some tips:
+
 To clear JavaWS cache run command: javaws -uninstall
+
 We need it when some changes to jar file was done.
