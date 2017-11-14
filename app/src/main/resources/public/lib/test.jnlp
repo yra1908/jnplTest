@@ -8,7 +8,7 @@
         <!-- Application Resources -->
         <j2se version="1.8+"
               href="http://java.sun.com/products/autodl/j2se"/>
-        <jar href="frame_23.jar" main="true"/>
+        <jar href="frame.jar" main="true"/>
     </resources>
     <security>
         <all-permissions/>
