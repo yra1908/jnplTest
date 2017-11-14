@@ -3,7 +3,7 @@
 
 <%
     final String jspFileName = "jnlp.jsp";
-    final String jarName = "frame_23.jar";
+    final String jarName = "frame.jar";
 
     String sessionId = request.getSession().getId();
     String url = request.getRequestURL().toString();
