@@ -1,6 +1,11 @@
 package demo.frame;
 
+import javax.jnlp.ServiceManager;
+import javax.jnlp.SingleInstanceListener;
+import javax.jnlp.SingleInstanceService;
+import javax.jnlp.UnavailableServiceException;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -15,7 +20,31 @@ public class WebStartExample {
     static JPanel jPanel = new JPanel();
 
     public static void main(final String[] args) {
+
+
         jFrame.add(jPanel);
+
+        try {
+            SingleInstanceService singleInstanceService = (SingleInstanceService) ServiceManager.lookup("javax.jnlp.SingleInstanceService");
+            singleInstanceService.addSingleInstanceListener(new SingleInstanceListener() {
+                private int count;
+                @Override public void newActivation(String[] args) {
+                    //System.out.println(EventQueue.isDispatchThread());
+                    EventQueue.invokeLater(new Runnable() {
+                        @Override
+                        public void run() {
+                            JOptionPane.showMessageDialog(jFrame, "already running: " + count);
+                            jFrame.setTitle("title:" + count);
+                            count++;
+                        }
+                    });
+                }
+            });
+        } catch (UnavailableServiceException ex) {
+            ex.printStackTrace();
+            return;
+        }
+
         if (args.length == 0) {
             System.out.println("No args");
         }
